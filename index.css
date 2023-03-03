@@ -1,2 +1,23 @@
 // Imported Roboto Font 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: lightgray;
+  font-family: Roboto;
+}
+
+footer {
+  bottom: 0px;
+  position: fixed;
+  width: 100%;
+}
+
+#sqlOutput {
+  display: none;
+  font-family: monospace;
+  background-color: black;
+}
