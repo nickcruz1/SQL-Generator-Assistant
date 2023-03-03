@@ -14,6 +14,38 @@
 </head>
 <body>
   
+    <label class="d-block text-center mt-3 mb-2 fw-bold text-dark" for="enterSQLQuestion">Enter Your SQL Question Below:</label>
+  <textarea name="askSQLQuestion" id="askQuestion" cols="40" rows="5" class="d-block m-auto" placeholder="SQL Question Goes Here..."></textarea>
+  <div class="d-flex justify-content-center mt-2 mb-3">
+  <button onclick="generateSQL()" class="btn btn-primary mx-2 mt-2"><i class="fa-solid fa-database"></i> Generate SQL</button>
+  <button onclick="resetSQL()" class="btn btn-danger mx-2 mt-2"><i class="fa-solid fa-arrows-rotate"></i> Reset</button>
+  </div>
+  
+  <!-- The SQL Output -->
+  <div id="sqlOutput" class="text-center mt-2 fw-bold text-light p-2 w-50 d-block mx-auto">SQL Code Goes Here...</div>
+  
+  
+  
+  
+  
+  
+  <!-- Footer Section -->
+  <footer class="bg-dark p-3">
+    <div class="d-flex justify-content-evenly">
+    <h4 class="text-light fw-bold text-center m-1">
+    @Copyright 2023
+    </h4>
+      <h4 class="text-light fw-bold text-center m-1">
+    Documentation
+    </h4>
+      <h4 class="text-light fw-bold text-center m-1">
+    Terms and Conditions
+    </h4>
+    </div>
+    </footer>
+  
+</div>
+  
   
   <!-- External JS file -->
   <script src="index.js"></script>
