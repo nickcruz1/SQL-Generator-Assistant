@@ -20,6 +20,16 @@ let insertOutputs = [
   
 ]
 
+<!-- Create Input Statements -->
+let createInputs = [
+  
+]
+
+<!-- Create Output Statements -->
+let createOutputs = [
+  
+]
+
 function generateSQL() {
   let output = document.getElementById("sqlOutput");
   
