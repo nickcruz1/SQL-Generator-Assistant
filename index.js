@@ -55,6 +55,10 @@ let commentOutputs = [
   "-- This is a comment and /* This is used for a multiline comment */ "
 ]
 
+// LATER ON ADD ANIMATIONS/STYLE THE BORDER WITH GREEN OR RED FOR A SHORT AMOUNT OF TIME WITH SETTIMEOUT DEPENDING ON INPUT
+// ALSO THROW AN ERROR IF NO INPUT IS ENTERED UPON SUBMISSION
+
+
 function generateSQL() {
   let output = document.getElementById("sqlOutput");
   
