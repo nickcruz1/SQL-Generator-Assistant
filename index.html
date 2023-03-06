@@ -14,16 +14,27 @@
 </head>
 <body>
   
-    <label class="d-block text-center mt-3 mb-2 fw-bold text-dark" for="enterSQLQuestion">Enter Your SQL Question Below:</label>
-  <textarea name="askSQLQuestion" id="askQuestion" cols="40" rows="5" class="d-block m-auto" placeholder="SQL Question Goes Here..."></textarea>
+  
+<div class="container-fluid m-0 p-0"> 
+  <!-- Header Section -->
+<header class="bg-dark m-0 p-0">
+  <h2 class="text-center fw-bold text-light fs-2 p-3"><i class="fa-solid fa-database"></i> SQL Generator/Assistant</h2>
+</header>
+
+  
+  <!-- Test - SQL Generator -->
+  
+  <div class="row mt-5">
+  <label class="d-block text-center mt-3 mb-2 fw-bold text-dark" for="enterSQLQuestion">Enter Your SQL Question Below:</label>
+  <textarea name="askSQLQuestion" id="askQuestion" cols="40" rows="5" class="d-block m-auto w-50"></textarea>
   <div class="d-flex justify-content-center mt-2 mb-3">
-  <button onclick="generateSQL()" class="btn btn-primary mx-2 mt-2"><i class="fa-solid fa-database"></i> Generate SQL</button>
+  <button onclick="SQLComments()" class="btn btn-primary mx-2 mt-2"><i class="fa-solid fa-database"></i> Generate SQL</button>
   <button onclick="resetSQL()" class="btn btn-danger mx-2 mt-2"><i class="fa-solid fa-arrows-rotate"></i> Reset</button>
   </div>
   
   <!-- The SQL Output -->
   <div id="sqlOutput" class="text-center mt-2 fw-bold text-light p-2 w-50 d-block mx-auto">SQL Code Goes Here...</div>
-  
+  </div>
   
   
   
