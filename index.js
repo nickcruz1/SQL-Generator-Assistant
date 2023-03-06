@@ -5,6 +5,11 @@ let selectInputs = [
   "How Do You Select Everything from Database", "How To Select Everything from a Database", "How To Select All", "How To Select a column from a database", "How To Select A Column from Database", "How to Select many columns from a database", 
 ]
 
+<!-- Select Statement Outputs -->
+let selectOutputs = [
+  "SELECT * FROM [table name]", "SELECT [column name], from [table name]", "SELECT [column name], [column name] from [table name]"
+]
+
 function generateSQL() {
   let output = document.getElementById("sqlOutput");
   
