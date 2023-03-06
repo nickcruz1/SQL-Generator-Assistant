@@ -58,6 +58,29 @@ let commentOutputs = [
 // LATER ON ADD ANIMATIONS/STYLE THE BORDER WITH GREEN OR RED FOR A SHORT AMOUNT OF TIME WITH SETTIMEOUT DEPENDING ON INPUT
 // ALSO THROW AN ERROR IF NO INPUT IS ENTERED UPON SUBMISSION
 
+switch (askQuestion) {
+  case ("HOW TO WRITE A COMMENT IN SQL"):
+    sqlOutput.innerHTML = "-- This is a single line comment and /* This is a multi-line comment */";
+   askQuestion.value = "";
+    break;
+  case ("HOW TO CREATE COMMENTS"):
+  sqlOutput.innerHTML = "-- This is a single line comment and /* This is a multi-line comment */";
+    askQuestion.value = "";
+    break;
+  case ("WHAT DO COMMENTS IN SQL LOOK LIKE"):
+     sqlOutput.innerHTML = "-- This is a single line comment and /* This is a multi-line comment */";
+     askQuestion.value = "";
+    break;
+  case (""):
+    askSQLQuestion.style.border = "1px solid red";
+    alert("Error. Please Enter a Question");
+    break;
+  default:
+    sqlOutput.innerHTML = "Sorry, please try to be more specific with your question";
+     askQuestion.value = "";
+}
+
+}
 
 function generateSQL() {
   let output = document.getElementById("sqlOutput");
