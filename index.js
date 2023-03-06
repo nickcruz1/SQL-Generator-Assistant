@@ -40,6 +40,13 @@ let deleteOutputs = [
   
 ]
 
+<!-- SQL Input Comments -->
+function SQLComments() {
+  let askSQLQuestion = document.getElementById("askQuestion");
+  let askQuestion = document.getElementById("askQuestion").value.toUpperCase();
+  
+  let sqlOutput = document.getElementById("sqlOutput");
+
 function generateSQL() {
   let output = document.getElementById("sqlOutput");
   
