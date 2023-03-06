@@ -30,6 +30,16 @@ let createOutputs = [
   
 ]
 
+<!-- Delete Input Statements -->
+let deleteInputs = [
+  
+]
+
+<!-- Delete Output Statements -->
+let deleteOutputs = [
+  
+]
+
 function generateSQL() {
   let output = document.getElementById("sqlOutput");
   
