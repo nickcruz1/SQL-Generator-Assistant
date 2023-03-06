@@ -46,6 +46,14 @@ function SQLComments() {
   let askQuestion = document.getElementById("askQuestion").value.toUpperCase();
   
   let sqlOutput = document.getElementById("sqlOutput");
+  
+   let commentInputs = [
+  "How to write a comment in SQL", "How to create comments", "What do comments in SQL look like"
+];
+
+let commentOutputs = [
+  "-- This is a comment and /* This is used for a multiline comment */ "
+]
 
 function generateSQL() {
   let output = document.getElementById("sqlOutput");
