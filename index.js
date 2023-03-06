@@ -82,6 +82,10 @@ switch (askQuestion) {
 
 }
 
+// Make sure when submitting inputs that the toUpperCase() function is added to them... ignore for outputs //
+// Might implement RegEx? 
+
+
 function generateSQL() {
   let output = document.getElementById("sqlOutput");
   
@@ -89,7 +93,11 @@ function generateSQL() {
 }
 
 function resetSQL() {
-  let output = document.getElementById("sqlOutput");
+  let askQuestion = document.getElementById("askQuestion");
+  let output = document.querySelector("#sqlOutput");
   
+  
+  askQuestion.value = "";
   output.innerHTML = "SQL Code Goes Here...";
+  askQuestion.style.border = "";
 }
