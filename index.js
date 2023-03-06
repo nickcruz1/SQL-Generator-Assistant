@@ -10,6 +10,16 @@ let selectOutputs = [
   "SELECT * FROM [table name]", "SELECT [column name], from [table name]", "SELECT [column name], [column name] from [table name]"
 ]
 
+<!-- Insert Input Statements -->
+let insetInputs = [
+  
+]
+
+<!-- Insert Output Statements -->
+let insertOutputs = [
+  
+]
+
 function generateSQL() {
   let output = document.getElementById("sqlOutput");
   
