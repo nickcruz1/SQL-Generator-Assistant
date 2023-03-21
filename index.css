@@ -15,8 +15,8 @@ $light: 'white';
 }
 
 body {
-  background-color: lightgray;
-  font-family: Roboto;
+  background-color: $bodyColor;
+  font-family: $importFont;
 }
 
 footer {
