@@ -10,6 +10,7 @@ $light: 'white';
 $slow: 5s;
 $verySlow: 10s;
 $quick: 1s;
+$veryQuick: 500ms;
 
 // Sass Variables
 
