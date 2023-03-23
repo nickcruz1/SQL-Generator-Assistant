@@ -1,6 +1,6 @@
 // CREATE MULTIPLE FUNCTIONS FOR DIFFERENT SQL STATEMENTS (PROBABLY WILL USE SWITCH CASES) AND THEN PUT ALL FUNCTIONS INTO ONE "MASTER FUNCTION" AND ASSIGN IT TO THE GENERATE SQL BUTTON...
 // Create database somewhere in project
-
+// Use fetch API somewhere in project?
 
 <!-- Select Statement Inputs -->
 let selectInputs = [
