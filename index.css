@@ -11,6 +11,7 @@ $slow: 5s;
 $verySlow: 10s;
 $quick: 1s;
 $veryQuick: 500ms;
+$box: border-box;
 
 // Sass Variables
 
