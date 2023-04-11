@@ -33,5 +33,5 @@ footer {
 #sqlOutput {
   display: $n;
   font-family: monospace;
-  background-color: black;
+  background-color: blue;
 }
