@@ -29,6 +29,7 @@ footer {
   bottom: $zero;
   position: $stay;
   width: 100%;
+  border: 1px solid black;
 }
 
 #sqlOutput {
