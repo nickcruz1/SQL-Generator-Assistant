@@ -22,6 +22,7 @@ $box: border-box;
 body {
   background-color: $bodyColor;
   font-family: $importFont;
+  box-sizing: border-box;
 }
 
 footer {
