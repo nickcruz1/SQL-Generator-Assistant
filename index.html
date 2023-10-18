@@ -15,47 +15,78 @@
 <body>
   
   
+<!-- Project that will assist with/generate SQL Code -->
+<!-- May repeat this for many other web technologies and then add to big learning platform -->
+<!-- Make this project very heavily dependent on user input.... Write the SQL statement based on what the user writes/enters
+For example: "How Do I create an insert statement in SQL" -> Insert into [table name] values -> Something like that... Return a generic error like "I'm sorry please try to be more specific or can't generate a response" --> 
+
+<!-- Possibly Turn this into a huge project - A General Code Generator/Assistant... maybe add multiple input fields and specifications.
+Option Values/The Options you choose determines the output?? Make it a full stack project possibly??? -->
+
+
 <div class="container-fluid m-0 p-0"> 
   <!-- Header Section -->
-<header class="bg-dark m-0 p-0">
-  <h2 class="text-center fw-bold text-light fs-2 p-3"><i class="fa-solid fa-database"></i> SQL Generator/Assistant</h2>
-</header>
   
-  <!-- Add other sections to this project -->
-  
-  
-  <!-- About Section? -->
-  
-  
-  <!-- Navbar link ?? -->
-
-  
-  <!-- Test - SQL Generator -->
-    <!-- Make the left and right side responsive to different screen sizes -->
-
-  <div class="row">
-
-     <div class="col-4 border border-primary vh-100">
-    <h2 class="text-center text-primary fs-2 m-2 p-2 fw-bold">Example Queries</h2>
-
-        <div class="d-flex justify-content-center">
-            <ul class="fw-bold">
-        <li class="m-2" onclick="selectQuery()">SELECT</li>
-        <li class="m-2" onclick="insertQuery()">INSERT</li>
-        <li class="m-2" onclick="updateQuery()">UPDATE</li>
-        <li class="m-2" onclick="deleteQuery()">DELETE</li>
-        <li class="m-2" onclick="dropQuery()">DROP</li>
-        <li class="m-2" onclick="createQuery()">CREATE</li>
-        <li class="m-2" onclick="alterQuery()">ALTER</li>
-        <li class="m-2" onclick="andQuery()">AND</l>
-        <li class="m-2" onclick="whereQuery()">WHERE</li>
-        <li class="m-2" onclick="orQuery()">OR</li>
-               </ul>
-
-          </div>
+  <!-- Modal Section -->
+  <div class="selectModal">
+   <h2 class="text-center text-primary mb-2 fw-bold">Select Statements</h2>
+    <textarea class="selectTextarea d-block m-auto" name="selectModal" id="selectTextArea" cols="30" rows="1" placeholder="SELECT * FROM [database_name]"></textarea>
+    <button onclick="pasteSELECT()" class="d-block m-auto btn btn-primary border border-light mt-2">Submit Example Query</button>
   </div>
   
- <div class="col-8 mt-5">
+  
+  <!-- Insert Modal -->
+   <div class="insertModal">
+   <h2 class="text-center text-primary mb-2 fw-bold">Insert Statements</h2>
+    <textarea class="selectTextarea d-block m-auto" name="insertModal" id="insertTextArea" cols="30" rows="1" placeholder="SELECT * FROM [database_name]"></textarea>
+    <button onclick="pasteSelect()" class="d-block m-auto btn btn-primary border border-light mt-2">Submit Example Query</button>
+  </div>
+  
+  
+  <!-- --> 
+  
+  
+  
+    
+<header class="row bg-dark m-0 p-0">
+  
+     <div class="col bg-dark"></div>
+  
+  <h2 class="col-11 text-center fw-bold text-light fs-2 p-3"><i class="fa-solid fa-database"></i> SQL Generator/Assistant</h2>
+  
+  <!-- Question Icon -->
+  <!-- Create a Modal for this part... A Q and A modal with dropdown functioanlity.  -->
+  <h2 onclick="question()" class="theQuestion text-light border border-light p-1 mx-2 d-block m-auto text-center" style="width: 30px; border-radius: 50%;"> <i class="fa-solid fa-question"></i> </h2>
+  
+
+</header>
+  
+  <!-- Test - SQL Generator -->
+  <!-- Make the left and right side responsive to different screen sizes -->
+  
+  <div class="row">
+  
+  <div class="col-4 border border-primary vh-100">
+    <h2 class="text-center text-primary fs-2 m-2 p-2 fw-bold">Example Queries</h2>
+    
+    <div class="d-flex justify-content-center">
+      <ul class="fw-bold">
+        <li class="m-2 text-center" onclick="selectQuery()">SELECT</li>
+        <li class="m-2 text-center" onclick="insertQuery()">INSERT</li>
+        <li class="m-2 text-center" onclick="updateQuery()">UPDATE</li>
+        <li class="m-2 text-center" onclick="deleteQuery()">DELETE</li>
+        <li class="m-2 text-center" onclick="dropQuery()">DROP</li>
+        <li class="m-2 text-center" onclick="createQuery()">CREATE</li>
+        <li class="m-2 text-center" onclick="alterQuery()">ALTER</li>
+        <li class="m-2 text-center" onclick="andQuery()">AND</l>
+        <li class="m-2 text-center" onclick="whereQuery()">WHERE</li>
+        <li class="m-2 text-center" onclick="orQuery()">OR</li>
+      </ul>
+      
+    </div>
+  </div>
+  
+  <div class="col-8 mt-5">
   <label class="d-block text-center mt-3 mb-2 fw-bold text-dark" for="enterSQLQuestion">Enter Your SQL Question Below:</label>
   <textarea name="askSQLQuestion" id="askQuestion" cols="40" rows="5" class="d-block m-auto w-50"></textarea>
   <div class="d-flex justify-content-center mt-2 mb-3">
@@ -68,20 +99,25 @@
   </div>
   
   
+  
+  
+  
   <!-- Footer Section -->
   <footer class="bg-dark p-3">
     <div class="d-flex justify-content-evenly">
-    <h4 class="text-light fw-bold text-center m-1">
+    <h4 class="text-light fw-bold text-center m-1 fs-5">
     @Copyright 2023
     </h4>
-      <h4 class="text-light fw-bold text-center m-1">
+      <h4 class="text-light fw-bold text-center m-1 fs-5">
     Documentation
     </h4>
-      <h4 class="text-light fw-bold text-center m-1">
+      <h4 class="text-light fw-bold text-center m-1 fs-5">
     Terms and Conditions
     </h4>
     </div>
     </footer>
+  
+</div>
   
 </div>
   
