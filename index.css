@@ -1,39 +1,76 @@
 // Imported Roboto Font 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
-$bodyColor: 'lightgray';
+
+// Sass Variables 
+$bodyColor: 'red';
 $importFont: 'roboto';
 $zero: 0px;
 $stay: fixed;
 $n: none;
 $dark: 'black';
 $light: 'white';
-$slow: 5s;
-$verySlow: 10s;
-$quick: 1s;
-$veryQuick: 500ms;
-$box: border-box;
-
-// Sass Variables
 
 * {
-  box-sizing: $box;
+  box-sizing: border-box;
 }
 
 body {
   background-color: $bodyColor;
   font-family: $importFont;
-  box-sizing: border-box;
 }
 
 footer {
   bottom: $zero;
   position: $stay;
   width: 100%;
-  border: 1px solid black;
 }
 
 #sqlOutput {
   display: $n;
   font-family: monospace;
-  background-color: blue;
+  background-color: $dark;
+  color: red !important;
+}
+
+.theQuestion:hover {
+  background-color: $dark;
+  color: $light;
+  cursor: pointer;
+  transition: 500ms ease-in-out;
+}
+
+li:hover {
+  cursor: pointer;
+  color: red;
+  transition: 300ms;
+}
+
+// Example Query Modals
+
+.selectModal {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 2px solid black;
+  border-radius: 10px;
+  background-color: lightgray;
+  padding: 2rem;
+  margin: 2rem;
+  width: 450px;
+}
+
+.insertModal {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 2px solid black;
+  border-radius: 10px;
+  background-color: lightgray;
+  padding: 2rem;
+  margin: 2rem;
+  width: 450px;
 }
