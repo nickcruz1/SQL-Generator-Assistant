@@ -1,6 +1,39 @@
-// CREATE MULTIPLE FUNCTIONS FOR DIFFERENT SQL STATEMENTS (PROBABLY WILL USE SWITCH CASES) AND THEN PUT ALL FUNCTIONS INTO ONE "MASTER FUNCTION" AND ASSIGN IT TO THE GENERATE SQL BUTTON...
-// Create database somewhere in project
-// Use fetch API somewhere in project?
+selectQuery = () => {
+  console.log("SELECT has been selected");
+let selectModal = document.querySelector(".selectModal");
+
+  
+  selectModal.style.display = "block";
+  
+}
+
+pasteSELECT = () => {
+  let selectModal = document.querySelector(".selectModal");
+  let sqlOutput = document.getElementById("sqlOutput");
+  let selectArea = document.querySelector(".selectTextarea");
+  // Correct this portion at a later time... Get selectArea inputted values to paste/show up for sqlOutput. 
+  
+  sqlOutput.innerHTML = selectArea.value;
+  selectModal.style.display = "none";
+  selectArea.value = "";
+  
+  // sqlOutput.innerHTML = selectArea.output;
+  // selectModal.style.display = "none";
+}
+
+insertQuery = () => {
+   let insertModal = document.querySelector(".insertModal");
+  let sqlOutput = document.getElementById("sqlOutput");
+  let selectArea = document.querySelector(".selectTextarea");
+  // Correct this portion at a later time... Get selectArea inputted values to paste/show up for sqlOutput. 
+  
+  sqlOutput.innerHTML = selectArea.value;
+  insertModal.style.display = "none";
+  selectArea.value = "";
+  
+}
+
+
 
 <!-- Select Statement Inputs -->
 let selectInputs = [
@@ -12,44 +45,14 @@ let selectOutputs = [
   "SELECT * FROM [table name]", "SELECT [column name], from [table name]", "SELECT [column name], [column name] from [table name]"
 ]
 
-<!-- Insert Input Statements -->
-let insetInputs = [
-  
-]
-
-<!-- Insert Output Statements -->
-let insertOutputs = [
-  
-]
-
-<!-- Create Input Statements -->
-let createInputs = [
-  
-]
-
-<!-- Create Output Statements -->
-let createOutputs = [
-  
-]
-
-<!-- Delete Input Statements -->
-let deleteInputs = [
-  
-]
-
-<!-- Delete Output Statements -->
-let deleteOutputs = [
-  
-]
-
 <!-- SQL Input Comments -->
-function SQLComments() {
+SQLComments = () => {
   let askSQLQuestion = document.getElementById("askQuestion");
   let askQuestion = document.getElementById("askQuestion").value.toUpperCase();
   
   let sqlOutput = document.getElementById("sqlOutput");
   
-   let commentInputs = [
+  let commentInputs = [
   "How to write a comment in SQL", "How to create comments", "What do comments in SQL look like"
 ];
 
@@ -84,22 +87,21 @@ switch (askQuestion) {
 
 }
 
-// Make sure when submitting inputs that the toUpperCase() function is added to them... ignore for outputs //
-// Might implement RegEx? 
-
-
-function generateSQL() {
+generateSQL = () => {
   let output = document.getElementById("sqlOutput");
   
   output.innerHTML = `<h2>SELECT * FROM [table name]`;
 }
 
-function resetSQL() {
+resetSQL = () => {
   let askQuestion = document.getElementById("askQuestion");
   let output = document.querySelector("#sqlOutput");
-  
   
   askQuestion.value = "";
   output.innerHTML = "SQL Code Goes Here...";
   askQuestion.style.border = "";
+}
+
+question = () => {
+  alert("Question Asked");
 }
