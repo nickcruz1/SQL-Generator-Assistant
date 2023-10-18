@@ -13,27 +13,16 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
 </head>
 <body>
-  
-  
-<!-- Project that will assist with/generate SQL Code -->
-<!-- May repeat this for many other web technologies and then add to big learning platform -->
-<!-- Make this project very heavily dependent on user input.... Write the SQL statement based on what the user writes/enters
-For example: "How Do I create an insert statement in SQL" -> Insert into [table name] values -> Something like that... Return a generic error like "I'm sorry please try to be more specific or can't generate a response" --> 
-
-<!-- Possibly Turn this into a huge project - A General Code Generator/Assistant... maybe add multiple input fields and specifications.
-Option Values/The Options you choose determines the output?? Make it a full stack project possibly??? -->
-
-
+    
 <div class="container-fluid m-0 p-0"> 
   <!-- Header Section -->
   
-  <!-- Modal Section -->
+  <!-- Start Of Modal Sections -->
   <div class="selectModal">
    <h2 class="text-center text-primary mb-2 fw-bold">Select Statements</h2>
     <textarea class="selectTextarea d-block m-auto" name="selectModal" id="selectTextArea" cols="30" rows="1" placeholder="SELECT * FROM [database_name]"></textarea>
     <button onclick="pasteSELECT()" class="d-block m-auto btn btn-primary border border-light mt-2">Submit Example Query</button>
   </div>
-  
   
   <!-- Insert Modal -->
    <div class="insertModal">
@@ -42,12 +31,9 @@ Option Values/The Options you choose determines the output?? Make it a full stac
     <button onclick="pasteSelect()" class="d-block m-auto btn btn-primary border border-light mt-2">Submit Example Query</button>
   </div>
   
+  <!-- End of Modal Sections --> 
+
   
-  <!-- --> 
-  
-  
-  
-    
 <header class="row bg-dark m-0 p-0">
   
      <div class="col bg-dark"></div>
@@ -55,14 +41,9 @@ Option Values/The Options you choose determines the output?? Make it a full stac
   <h2 class="col-11 text-center fw-bold text-light fs-2 p-3"><i class="fa-solid fa-database"></i> SQL Generator/Assistant</h2>
   
   <!-- Question Icon -->
-  <!-- Create a Modal for this part... A Q and A modal with dropdown functioanlity.  -->
-  <h2 onclick="question()" class="theQuestion text-light border border-light p-1 mx-2 d-block m-auto text-center" style="width: 30px; border-radius: 50%;"> <i class="fa-solid fa-question"></i> </h2>
-  
+  <h2 onclick="question()" class="theQuestion text-light border border-light p-1 mx-2 d-block m-auto text-center" style="width: 30px; border-radius: 50%;"> <i class="fa-solid fa-question"></i> </h2> 
 
 </header>
-  
-  <!-- Test - SQL Generator -->
-  <!-- Make the left and right side responsive to different screen sizes -->
   
   <div class="row">
   
@@ -97,10 +78,6 @@ Option Values/The Options you choose determines the output?? Make it a full stac
   <!-- The SQL Output -->
   <div id="sqlOutput" class="text-center mt-2 fw-bold text-light p-2 w-50 d-block mx-auto">SQL Code Goes Here...</div>
   </div>
-  
-  
-  
-  
   
   <!-- Footer Section -->
   <footer class="bg-dark p-3">
